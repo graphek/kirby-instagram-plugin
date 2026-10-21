@@ -1,0 +1,31 @@
+{
+  "name": "graphek/kirby-instagram",
+  "description": "Kirby Instagram integration with locally stored media and Panel management",
+  "type": "kirby-plugin",
+  "license": "MIT",
+  "require": {
+    "php": "^8.4",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "getkirby/composer-installer": "^1.2",
+    "ext-fileinfo": "*"
+  },
+  "extra": {
+    "installer-name": "social-media",
+    "kirby": {
+      "compatible": "^5.0"
+    }
+  },
+  "homepage": "https://github.com/graphek/kirby-instagram-plugin",
+  "authors": [
+    {
+      "name": "graphek",
+      "homepage": "https://github.com/graphek"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/graphek/kirby-instagram-plugin/issues",
+    "source": "https://github.com/graphek/kirby-instagram-plugin"
+  }
+}

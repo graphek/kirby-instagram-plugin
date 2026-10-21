@@ -96,6 +96,6 @@ final class ConnectionClient
         try {
             if (curl_exec($handle) === false) throw new RuntimeException();
             return ['status' => curl_getinfo($handle, CURLINFO_RESPONSE_CODE), 'body' => $bytes];
-        } finally { curl_close($handle); }
+        } finally { unset($handle); }
     }
 }

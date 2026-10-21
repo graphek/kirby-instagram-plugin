@@ -165,7 +165,7 @@ final class InstagramClient
             $ok = curl_exec($curl);
             $status = curl_getinfo($curl, CURLINFO_RESPONSE_CODE);
             if ($ok === false || $status !== 200) throw new RuntimeException('Das Instagram-Vorschaubild konnte nicht geladen werden.', 502);
-        } finally { curl_close($curl); }
+        } finally { unset($curl); }
         return $bytes;
     }
 
@@ -240,6 +240,6 @@ final class InstagramClient
         try {
             if (curl_exec($curl) === false) throw new RuntimeException('Instagram ist nicht erreichbar.');
             return ['status' => curl_getinfo($curl, CURLINFO_RESPONSE_CODE), 'body' => $bytes];
-        } finally { curl_close($curl); }
+        } finally { unset($curl); }
     }
 }
